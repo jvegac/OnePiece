@@ -72,6 +72,7 @@ header {
     justify-content: center;
     text-align: center;
     transform: rotateY(180deg);
+    padding: 10px; /* Añadir padding para que el texto no esté pegado a los bordes */
 }
 
 .card:hover .card-front {
@@ -107,5 +108,9 @@ header {
     }
     .card-front img {
         width: 100%;
+    }
+    .card-back {
+        height: auto;
+        padding: 20px; /* Ajustar padding para pantallas más pequeñas */
     }
 }
