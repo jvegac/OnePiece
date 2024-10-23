@@ -82,9 +82,11 @@ body {
     transform: rotateY(180deg);
   }
   
-  /* Touch effect for mobile */
-  .card:active .card-inner {
-    transform: rotateY(180deg);
+  /* Click effect for mobile */
+  @media (hover: none) {
+    .card:active .card-inner {
+      transform: rotateY(180deg);
+    }
   }
   
   /* Responsive adjustments */
