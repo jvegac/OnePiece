@@ -37,6 +37,7 @@ header {
     height: 300px;
     perspective: 1000px;
     flex: 1 1 200px;
+    position: relative; /* Necesario para que las tarjetas no se solapen */
 }
 
 .card-front, .card-back {
@@ -46,7 +47,7 @@ header {
     backface-visibility: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 1s;
+    transition: transform 0.6s; /* Reducir la duración de la transición para una experiencia más fluida */
 }
 
 .card-front {
@@ -91,15 +92,20 @@ header {
 @media (max-width: 900px) {
     .card-container {
         max-width: 600px;
+        gap: 15px; /* Ajustar el gap para pantallas más pequeñas */
     }
 }
 
 @media (max-width: 600px) {
     .card-container {
-        max-width: 300px;
+        flex-direction: column;
+        align-items: center;
     }
     .card {
-        width: 100%;
+        width: 90%;
         height: auto;
+    }
+    .card-front img {
+        width: 100%;
     }
 }
