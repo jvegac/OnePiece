@@ -14,7 +14,8 @@ header {
     padding: 15px 0;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Añadir un margen inferior para separar el logo de las tarjetas */
+    margin-bottom: 20px;
+    /* Añadir un margen inferior para separar el logo de las tarjetas */
 }
 
 .logo {
@@ -39,7 +40,8 @@ header {
     flex: 1 1 200px;
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -96,10 +98,13 @@ header {
 
 @media (max-width: 600px) {
     .card-container {
-        max-width: 300px;
+        max-width: 80%;
     }
+
     .card {
-        width: 100%;
-        height: auto;
+        width: 200px;
+        height: 300px;
+        perspective: 1000px;
+        flex: 1 1 200px;
     }
 }
